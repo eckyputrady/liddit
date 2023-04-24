@@ -1,0 +1,28 @@
+.component-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.component-profile .component-profile--bg {
+    height: 300px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.component-profile .component-profile--profpic {
+    width: 200px;
+    border-radius: 50%;
+    margin-top: -100px;
+    border: 4px solid lightblue;
+}
+
+.component-profile .component-profile--subtitle {
+    margin-top: 0px;
+    margin-bottom: 4px;
+}
+
+.component-profile .component-profile--paragraph {
+    max-width: 80%;
+}
