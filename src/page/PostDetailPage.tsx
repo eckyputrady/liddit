@@ -33,7 +33,7 @@ function repliesToCommentProps(rcomment: RComment): CommentProps[] {
       return [];
     } else {
       return data.replies.data.children
-        .filter((x) => x.kind !== "more") // TODO: handle more later
+        .filter((x) => x.kind !== "more") // TODO: handle "more" type later
         .map((x) => toCommentProps(x as RComment));
     }
   } catch (e) {

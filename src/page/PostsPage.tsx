@@ -33,7 +33,6 @@ export function PostsPage() {
   }>({ posts: [] });
 
   async function load(subreddit: string, after?: string) {
-    // TODO get these from path
     const { data } = await getPosts(subreddit, "new", after);
     setPage((prev) => ({
       next: data.after,
