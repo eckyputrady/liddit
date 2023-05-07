@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 function Home() {
-  return <Navigate replace to="/r/indonesia" />;
+  return <Navigate replace to="/r/ExperiencedDevs" />;
 }
 
 function App() {
