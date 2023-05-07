@@ -38,7 +38,7 @@ export interface Comment {
   data: {
     created: number;
     id: string;
-    replies: "" | Listing<Comment>;
+    replies: "" | Listing<Comment | More>;
     author: string;
     body_html: string;
     score: number;
@@ -46,6 +46,11 @@ export interface Comment {
     down: number;
     depth: number;
   };
+}
+
+export interface More {
+  kind: "more";
+  // TODO: extract necessary fields
 }
 
 export async function getPosts(

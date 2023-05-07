@@ -27,6 +27,11 @@
   color: white;
 }
 
+.listItem--title a {
+  text-decoration: none;
+  color: white;
+}
+
 .listItem--actionWrapper {
   display: flex;
   column-gap: 48px;

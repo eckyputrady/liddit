@@ -1,9 +1,30 @@
 import { PostDetailPage } from "./page/PostDetailPage";
 import { PostsPage } from "./page/PostsPage";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Navigate,
+} from "react-router-dom";
 
-const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+function Home() {
+  return <Navigate replace to="/r/indonesia" />;
+}
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "r/:subreddit",
+      element: <PostsPage />,
+    },
+    {
+      path: "p/:postId",
+      element: <PostDetailPage />,
+    },
+  ]);
   return (
     <div
       className="app"
@@ -14,8 +35,7 @@ function App() {
         color: "lightgray",
       }}
     >
-      {/* <PostsPage /> */}
-      <PostDetailPage />
+      <RouterProvider router={router} />
     </div>
   );
 }

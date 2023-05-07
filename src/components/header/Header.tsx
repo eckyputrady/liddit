@@ -1,6 +1,7 @@
 import "./Header.css";
 
-export function Header() {
+export function Header(props: { title: string }) {
+  // TODO: implement Vertical dots and search later
   return (
     <div className="header">
       <div>
@@ -8,7 +9,7 @@ export function Header() {
           <i className="bx bx-dots-vertical" />
         </a>
       </div>
-      <div>LiteReddit</div>
+      <div>{props.title}</div>
       <div>
         <a>
           <i className="bx bx-search" />

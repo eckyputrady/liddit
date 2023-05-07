@@ -1,7 +1,9 @@
 import "./ListItem.css";
+import { Link } from "react-router-dom";
 
 export interface PostListItemProps {
   id: string;
+  link: string;
   subreddit: string;
   timeAgo: string;
   title: string;
@@ -27,7 +29,9 @@ export function PostListItem(props: PostListItemProps) {
         <span>•</span>
         <span>{props.timeAgo}</span>
       </div>
-      <div className="listItem--title">{props.title}</div>
+      <div className="listItem--title">
+        <Link to={props.link}>{props.title}</Link>
+      </div>
       <div className="listItem--actionWrapper">
         <div className="listItem--actionWrapper--action">
           <a className="listItem--actionWrapper--action--icon">
