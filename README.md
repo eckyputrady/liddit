@@ -25,3 +25,15 @@ A lighweight web-based reddit client.
 - Upvote & downvote
 - Write replies
 
+## Developer's Guide
+
+```
+# developing
+npm run dev
+
+# testing 
+npm test 
+
+# build
+npm build
+```
