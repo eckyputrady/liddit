@@ -25,6 +25,7 @@ export interface Post {
     domain?: string;
     preview?: {
       images?: {
+        source: { url: string };
         resolutions: {
           url: string;
         }[];

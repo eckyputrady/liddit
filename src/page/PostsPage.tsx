@@ -17,7 +17,9 @@ function toPostListItemProps({ data }: Post): PostListItemProps {
     commentCount: data.num_comments,
     previewImageUrl: (data.thumbnail?.startsWith("http")
       ? data.thumbnail
-      : data.preview?.images?.[0].resolutions?.[1].url || ""
+      : data.preview?.images?.[0].resolutions?.[1]?.url ||
+        data.preview?.images?.[0].source.url ||
+        ""
     ).replaceAll(/&amp;/g, "&"),
     previewImageSubtitle: data.domain,
   };
