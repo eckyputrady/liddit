@@ -1,0 +1,72 @@
+.listItem {
+  padding: 16px;
+  border-bottom: 1px solid darkgray;
+}
+
+.listItem::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.listItem--header {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+  color: darkgray;
+  font-size: 0.8em;
+}
+
+.listItem--subredditLogo {
+  width: 20px;
+  border-radius: 100%;
+}
+
+.listItem--title {
+  margin: 8px 0px;
+  color: white;
+}
+
+.listItem--title a {
+  text-decoration: none;
+  color: white;
+}
+
+.listItem--actionWrapper {
+  display: flex;
+  column-gap: 48px;
+  color: darkgray;
+}
+
+.listItem--actionWrapper--action {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.listItem--actionWrapper--action--icon {
+  font-size: 1.2em;
+}
+
+.listItem--title--img {
+  float: right;
+  position: relative;
+}
+
+.listItem--title--img img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.listItem--title--img--subtitle {
+  position: absolute;
+  bottom: 3px;
+  font-size: 0.6em;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  overflow: hidden;
+  width: 100%;
+  padding: 4px;
+  box-sizing: border-box;
+}
